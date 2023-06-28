@@ -31,8 +31,12 @@
 )
 
 #outline()
-#pagebreak()
 
+#pagebreak()
+= Samenvatting
+
+
+#pagebreak()
 = Introductie
 == Context en achtergrond
 Ik heb tijdens mijn stageperiode gewerkt aan een datavisualisatietool. Ik heb deze opdracht gemaakt in dienst van Wynand Alkema, namens zijn bedrijf Tenwise; een bedrijf gespecialiseerd in data-analyse. De tool is ontworpen om gebruikers zonder query-ervaring de mogelijkheid te geven om voedselrecepten en ingrediënten te verkennen en alternatieve ingrediënten makkelijk uit te wisselen. De tool maakt gebruik van een grafendatabase waarin voedselrecepten en ingrediënten worden opgeslagen als knooppunten, met relaties die de connecties tussen deze knooppunten weergeven.
@@ -88,21 +92,33 @@ In het competentierapport wordt de volgende structuur gehanteerd om de verschill
 
 Ik neem je graag mee op mijn ontwikkelingsreis tijdens mijn stageperiode. Met trots presenteer ik de competenties, reflecties en ervaringen die mijn groei en toewijding aan het vakgebied van softwareontwikkeling weerspiegelen.
 
-#pagebreak()
-= Productomschrijving
-Deze sectie beschrijft de webapplicatie die ik heb ontwikkeld tijdens de stageperiode. Het product is een intuïtieve en gebruiksvriendelijke visualisatietool die gebruikers zonder query-ervaring ondersteunt bij het verkennen van grafendata. 
+// #pagebreak()
+// = Productomschrijving
+// Deze sectie beschrijft de webapplicatie die ik heb ontwikkeld tijdens de stageperiode. Het product is een intuïtieve en gebruiksvriendelijke visualisatietool die gebruikers zonder query-ervaring ondersteunt bij het verkennen van grafendata. 
 
-== Interactieve visualisaties
-Één van de kenmerken van het product is de mogelijkheid om interactieve visualisaties te genereren. Gebruikers kunnen via de webapplicatie verschillende instellingen kiezen, zoals de grootte van de visualisatie, de kleuren van de knooppunten en de relaties, en de layout van de visualisatie. De visualisatie wordt vervolgens gegenereerd op basis van de geselecteerde instellingen. Deze visuele representatie van de data kan gebruikers helpen om de data beter te begrijpen en de relaties tussen de knooppunten te identificeren.
+// == Interactieve visualisaties
+// Één van de kenmerken van het product is de mogelijkheid om interactieve visualisaties te genereren. Gebruikers kunnen via de webapplicatie verschillende instellingen kiezen, zoals de grootte van de visualisatie, de kleuren van de knooppunten en de relaties, en de layout van de visualisatie. De visualisatie wordt vervolgens gegenereerd op basis van de geselecteerde instellingen. Deze visuele representatie van de data kan gebruikers helpen om de data beter te begrijpen en de relaties tussen de knooppunten te identificeren.
 
-== Zoeken en filteren
-De webapplicatie biedt krachtige zoek- en filtermogelijkheden waarmee gebruikers specifieke informatie op kunnen zoeken en relevante resultaten kunnen filteren. Bijvoorbeeld het type ingredient, de naam van een recept of de naam van een ingredient. Dit geeft gebruikers de mogelijkheid om snel specifieke resultaten te vinden, verbonden knooppunten te identificeren en de relaties tussen de knooppunten te analyseren. Door deze zoek- en filtermogelijkheden kunnen gebruikers de data verkennen en de informatie vinden die ze nodig hebben.
+// == Zoeken en filteren
+// De webapplicatie biedt krachtige zoek- en filtermogelijkheden waarmee gebruikers specifieke informatie op kunnen zoeken en relevante resultaten kunnen filteren. Bijvoorbeeld het type ingredient, de naam van een recept of de naam van een ingredient. Dit geeft gebruikers de mogelijkheid om snel specifieke resultaten te vinden, verbonden knooppunten te identificeren en de relaties tussen de knooppunten te analyseren. Door deze zoek- en filtermogelijkheden kunnen gebruikers de data verkennen en de informatie vinden die ze nodig hebben.
 
-== Intuïtieve gebruikersinterface
+// == Intuïtieve gebruikersinterface
 
 
 #pagebreak()
 = Analyseren
+== Beschrijving
+Situaties waarin het belangrijk is om complexe problemen te begrijpen, trends en patronen te identificeren, risico's te evalueren en processen te optimaliseren komen vaak voor binnen de softwareontwikkeling. Het is daarom belangrijk om de verschillende analysemethoden en -technieken te begrijpen en toe te passen om deze problemen op te lossen. Analysevaardigheden helpen bij het aanpakken van deze problemen, want ze stellen je in staat om de situatie te begrijpen en de juiste oplossing te vinden.
+
+Het nemen van besluiten op basis van feitelijke gegevens resulteert in beter resultaten en efficiëntie. Door het analyseren van gebruikersinteractie, zoals klikgedrag en zoekopdrachten, kun je het gedrag van de gebruiker beter begrijpen. Er kan ontdekt worden welke functionaliteiten en zoekopdrachten het meest gebruikt worden. Op basis van deze informatie kan de gebruikerservaring geoptimaliseerd worden.
+
+== Analysemethoden en -technieken
+#lorem(50)
+== Toepassing
+#lorem(50)
+== Resultaten en bevindingen
+#lorem(50)
+== Reflectie
 #lorem(50)
 #pagebreak()
 
@@ -111,6 +127,10 @@ De webapplicatie biedt krachtige zoek- en filtermogelijkheden waarmee gebruikers
 #pagebreak()
 
 = Realiseren
+#lorem(50)
+#pagebreak()
+
+= Adviseren
 #lorem(50)
 #pagebreak()
 
