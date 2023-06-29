@@ -10,13 +10,12 @@ aanpak, kritisch denken en mijn vermogen om in een professionele omgeving te wer
 #Inhoud
 
 Het project omvat de volgende belangrijke documenten:
-
-    Competentieverslag: Een grondige analyse van de competenties die zijn ontwikkeld en toegepast tijdens de stage, inclusief praktijkvoorbeelden en bewijs van mijn bekwaamheid.
-    Projectbeschrijving: Een gedetailleerd overzicht van de organisatie, projectachtergrond en de relevantie ervan voor mijn academische en professionele groei.
-    Ontwerpkeuzes: Een bespreking van de ontwerpbeslissingen die zijn genomen tijdens het ontwikkelingsproces, waarbij de overwegingen en de achterliggende redenering worden belicht.
-    Implementatiedetails: Inzichten in het implementatieproces, inclusief technische aspecten, gebruikte tools en eventuele uitdagingen.
-    Reflecties: Persoonlijke reflecties op de stage-ervaring, leermomenten en gebieden voor verdere groei.
-    Bijlagen: Aanvullend ondersteunend materiaal, zoals voorbeeldcode, relevante documenten en visuele hulpmiddelen.
+    - Competentieverslag: Een grondige analyse van de competenties die zijn ontwikkeld en toegepast tijdens de stage, inclusief praktijkvoorbeelden en bewijs van mijn bekwaamheid.
+    - Projectbeschrijving: Een gedetailleerd overzicht van de organisatie, projectachtergrond en de relevantie ervan voor mijn academische en professionele groei.
+    - Ontwerpkeuzes: Een bespreking van de ontwerpbeslissingen die zijn genomen tijdens het ontwikkelingsproces, waarbij de overwegingen en de achterliggende redenering worden belicht.
+    - Implementatiedetails: Inzichten in het implementatieproces, inclusief technische aspecten, gebruikte tools en eventuele uitdagingen.
+    - Reflecties: Persoonlijke reflecties op de stage-ervaring, leermomenten en gebieden voor verdere groei.
+    - Bijlagen: Aanvullend ondersteunend materiaal, zoals voorbeeldcode, relevante documenten en visuele hulpmiddelen.
 
 #Aan de slag
 
