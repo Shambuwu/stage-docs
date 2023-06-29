@@ -2,7 +2,7 @@
 #let date = datetime(
   year: 2023,
   month: 6,
-  day: 19
+  day: 28
 )
 
 #place(
@@ -24,13 +24,85 @@
 #show heading: it => {
   set block(below: 10pt)
   set text(weight: "regular")
-  align(center, smallcaps(it))
+  align(left, smallcaps(it))
 }
 #set text(
-    font: "Noto Music"
+    font: "Linux Libertine",
 )
 
 #outline()
+#pagebreak()
+#set page(
+  numbering: "1 / 1",
+  number-align: right,
+)
+
+= Voorwoord
+Voor u ligt het verantwoordingsrapport dat vormt als weerspiegeling van mijn professionele ontwikkeling en competentiegroei gedurende mijn stageperiode. Graag presenteer ik in dit rapport mijn ervaringen, verworven kennis en vaardigheden.
+
+Graag wil ik van deze gelegenheid gebruik maken om mijn waardering en dankbaarheid uit te spreken naar mijn medestudent Geert Perton. Zijn voortdurende steun, samenwerking en motivatie gedurende dit traject hebben een onschatbare waarde gehad. Samen hebben we uitdagingen overwonnen, kennis gedeeld en elkaar geïnspireerd om het beste uit onszelf te halen. Zonder zijn waardevolle bijdrage zou dit verantwoordingsrapport niet compleet zijn. 
+
+~ Levi Leuwol, #date.display()
+
+
+#pagebreak()
+= Referenties
+#align(left,
+  table(
+    columns: (auto, auto, auto),
+    rows: (auto, auto, auto),
+    align: left,
+    inset: 10pt,
+    stroke: none,
+    [*Onderdeel*], [*Auteur*], [*Vindplaats*],
+    [*Broncode*], [], [],
+    [Client], [G. E. Perton, L. J. J. Leuwol], [broncode -> frontend],
+    [Server], [G. E. Perton, L. J. J. Leuwol], [broncode -> backend],
+    [], [], [],
+    [*Documenten*], [], [],
+    [Analyseren: Documentanalyse en inzichten], [L. J. J. Leuwol], [documenten -> analyseverslag.pdf],
+    [Adviseren: Adviesrapport en aanbevelingen], [L. J. J. Leuwol], [documenten -> adviesrapport.pdf],
+    [Ontwerpen: Ontwerpdocument en rationale], [L. J. J. Leuwol], [documenten -> ontwerpdocument.pdf],
+    [Realiseren: Implementatieverslag en uitvoering], [L. J. J. Leuwol], [documenten -> implementatieverslag.pdf],
+    [Projectmatig werken: Projectplan en -evaluatie], [L. J. J. Leuwol], [documenten -> projectplan.pdf],
+    [Onderzoeken: Onderzoeksverslag en resultaten], [L. J. J. Leuwol], [documenten -> onderzoeksverslag.pdf],
+    [], [], [],
+    [*Bijlagen*], [], [],
+
+  )
+)
+
+#pagebreak()
+= Begrippenlijst
+#align(left,
+  table(
+    columns: (auto, auto),
+    rows: (auto, auto),
+    align: left,
+    inset: 10pt,
+    stroke: none,
+    [*Begrip*], [*Definitie*],
+    [Client-server database model], [Een architectuurmodel waarbij de database zich op een centrale server bevindt, terwijl de client via een netwerkverbinding toegang heeft tot de database.],
+    [Database], [Een gestructureerde verzameling gegevens die op georganiseerde wijze wordt opgeslagen en beheerd],
+    [Graph database], [Een type database dat is geoptimaliseerd voor het opslaan, beheren en vragen van grafendata.],
+    [Neo4j], [Een open-source graph database management systeem dat gebaseerd is op het property graph model.],
+    [Symfony], [Een open-source PHP-framework voor de ontwikkeling van webapplicaties.],
+    [PHP], [Een populaire programmeertaal die veel wordt gebruikt voor de ontwikkeling van webapplicaties.],
+    [Framework], [Een softwareontwikkelingsplatform dat een set van tools, bibliotheken en standaardpraktijken biedt om de ontwikkeling van applicaties te vergemakkelijken en versnellen.],
+    [OGM (Object Graph Mapping)], [Een techniek die de mapping en interactie tussen objectgeoriënteerde applicaties en een graph database mogelijk maakt],
+    [Webapplicatie], [Een applicatie die via een webbrowser kan worden gebruikt en toegankelijk is via het internet of een intranet],
+    [Gebruikersinterface (GUI)], [Het visuele en interactieve deel van een softwareapplicatie waarmee gebruikers kunnen communiceren en taken kunnen uitvoeren],
+    [Datavisualisatie], [Het visueel weergeven en presenteren van gegevens om patronen, trends en inzichten gemakkelijker te begrijpen en communiceren],
+    [Backend], [Het gedeelte van een softwareapplicatie dat verantwoordelijk is voor de verwerking van gegevens, logica en database-interactie, vaak op de server],
+    [Frontend], [Het gedeelte van een softwareapplicatie dat de gebruikersinterface presenteert en gebruikersinteractie mogelijk maakt, vaak in de webbrowser],
+    [Frontend framework], [Een softwareframework dat specifiek is ontworpen voor de ontwikkeling van de gebruikersinterface en de interactie met een webapplicatie],
+    [Backend framework], [Een softwareframework dat specifiek is ontworpen voor de ontwikkeling van de serverzijde van een webapplicatie, inclusief de gegevensverwerking en logica],
+    [API (Application Programming Interface)], [Een set regels en protocollen die de communicatie en interactie tussen verschillende softwareapplicaties mogelijk maakt],
+    [MVC (Model-View-Controller)], [Een ontwerppatroon voor de structurering van een softwareapplicatie, waarbij de functionaliteit wordt opgesplitst in drie componenten: het model, de view en de controller],
+    [Git], [Een gedistribueerd versiebeheersysteem dat wordt gebruikt voor het bijhouden van wijzigingen in de broncode van softwareprojecten],
+    [Continuous Integration (CI)], [Een ontwikkelingspraktijk waarbij ontwikkelaars regelmatig hun code integreren in een gedeelde repository, wat automatische build- en testprocessen triggert],
+  )
+)
 
 #pagebreak()
 = Samenvatting
@@ -39,11 +111,9 @@
 #pagebreak()
 = Introductie
 == Context en achtergrond
-Ik heb tijdens mijn stageperiode gewerkt aan een datavisualisatietool. Ik heb deze opdracht gemaakt in dienst van Wynand Alkema, namens zijn bedrijf Tenwise; een bedrijf gespecialiseerd in data-analyse. De tool is ontworpen om gebruikers zonder query-ervaring de mogelijkheid te geven om voedselrecepten en ingrediënten te verkennen en alternatieve ingrediënten makkelijk uit te wisselen. De tool maakt gebruik van een grafendatabase waarin voedselrecepten en ingrediënten worden opgeslagen als knooppunten, met relaties die de connecties tussen deze knooppunten weergeven.
+Tijdens de stageperiode is er gewerkt aan een datavisualisatietool. Deze opdracht is gemaakt in dienst van Wynand Alkema, namens zijn bedrijf Tenwise; een bedrijf gespecialiseerd in data-analyse. De tool is ontworpen om gebruikers zonder query-ervaring de mogelijkheid te geven om voedselrecepten en ingrediënten te verkennen en alternatieve ingrediënten makkelijk uit te wisselen. De tool maakt gebruik van een grafendatabase waarin voedselrecepten en ingrediënten worden opgeslagen als knooppunten, met relaties die de connecties tussen deze knooppunten weergeven.
 
- Ik heb tijdens de stageperiode gebruikgemaakt van backend frameworks zoals Symfony en NestJS. Het backend framework is verantwoordelijk voor optimalisatie strategieën, zoals caching en load balancing, en dient als een API voor de frontend. Door het gebruik van een OGM (Object Graph Mapper) kon ik het MVC-model toepassen op de backend.
-
- Deze stage bood mij de mogelijkheid om mijn kennis en vaardigheden verder te ontwikkelen. Het heeft bijgedragen aan mijn professionele groei en heeft mij waardevolle eraring opgedaan.
+Tenwise wilt met deze tool haar klanten de mogelijkheid geven om voedselrecepten en ingrediënten te verkennen en alternatieve ingrediënten te identificeren. De tool moet gebruikers zonder query-ervaring de mogelijkheid geven om de data te verkennen en de informatie te vinden die ze nodig hebben. Daarnaast moet de tool gebruikers de mogelijkheid geven om de data te visualiseren en de relaties tussen de knooppunten te identificeren.
 
 == Probleemstelling
 Het verkennen van een dataset kan lastig zijn voor gebruikers zonder query-ervaring. Zonder een intuïtieve en gebruiksvriendelijke tool kunnen zij moeite hebben met het vinden van specifieke recepten en het identificeren van alternatieve ingrediënten. Uitdagingen die hierbij kunnen ontstaan, zijn bijvoorbeeld:
@@ -57,11 +127,11 @@ Het verkennen van een dataset kan lastig zijn voor gebruikers zonder query-ervar
 Gezien de complexiteit en uitdagingen die gebruikers zonder query-ervaring mogelijk ondervinden bij het verkennen van voedselrecepten en het identificeren van alternatieve ingrediënten, is het belangrijk om een intuïtieve en gebruiksvriendelijke tool te ontwerpen die deze uitdagingen kan oplossen. Het doel van dit stageproject is dan ook het ontwikkelen van deze applicatie dat de hiervoor genoemde problemen adresseert.
 
 == Doel van het competentierapport
-Het doel van dit competentierapport is om een gedetailleerd overzicht te geven van de competenties die ik heb ontwikkeld en toegepast tijdens mij stageperiode. Het rapport dient als bewijs van mijn professionele ontwikkeling en mijn vermogen om de opgedane kennis en vaardigheden, van mijn opleiding HBO-ICT, toe te passen in de praktijk. 
+Het doel van dit competentierapport is om een gedetailleerd overzicht te geven van de competenties die zijn ontwikkeld en toegepast tijdens de stageperiode. Het rapport dient als bewijs van de professionele ontwikkeling en vermogen van de student om de opgedane kennis en vaardigheden, van de opleiding HBO-ICT, toe te passen in de praktijk. 
 
-Daarnaast dient het rapport inzicht te geven in hoe de stage bijdraagt aan mijn persoonlijke groei en vaardigheden voor mijn toekomstige carrière. Ik zal de verschillende technieken en methoden die ik heb toegepast tijdens mijn stageperiode beschrijven en uitleggen hoe deze bijdragen aan mijn professionele ontwikkeling.
+Daarnaast dient het rapport inzicht te geven in hoe de stage bijdraagt aan de persoonlijke groei en vaardigheden van de student. De verschillende technieken en methoden die zijn toegepast tijdens de stageperiode worden beschreven en er wordt uitgelegd hoe deze bijdragen aan de professionele ontwikkeling van de student.
 
-Al met al dient dit rapport als een belangrijk docuemnt om mijn professionele ontwikkeling en groei binnen de opleiding HBO-ICT te documenteren en als reflectie op mijn stage-ervaringen.
+Dit rapport dient als een belangrijk document om de professionele ontwikkeling en groei van de student binnen de opleiding HBO-ICT te documenteren en als reflectie op de stage-ervaringen.
 
 == Overzicht van de structuur
 In het competentierapport wordt de volgende structuur gehanteerd om de verschillende aspecten van de stage toe te lichten:
@@ -72,25 +142,23 @@ In het competentierapport wordt de volgende structuur gehanteerd om de verschill
 
     + *Introductie:* In de introductie wordt de context en achtergrond van de stage beschreven. Daarnaast wordt de probleemstelling van het stageproject toegelicht en wordt het doel van het competentierapport beschreven.
 
-    + *Beschrijving van het product:* Hier wordt het product beschreven dat ik heb ontwikkeld tijdens mijn stageperiode. Ik zal de verschillende functionaliteiten van het product toelichten en uitleggen hoe deze bijdragen aan het oplossen van de probleemstelling.
+    + *Analyseren:* In dit hoofdstuk worden de verschillende analysemethoden en technieken beschreven die zijn heb toegepast tijdens de stageperiode. 
 
-    + *Analyseren:* In dit hoofdstuk zal ik de verschillende analysemethoden en technieken beschrijven die ik heb toegepast tijdens mijn stageperiode. 
+    + *Adviseren:* In dit hoofdstuk wordt het adviesproces beschreven, inclusief de verschillende adviesmethoden en technieken.
 
-    + *Ontwerpen:* Hier zal ik de verschillende ontwerpmethoden en technieken beschrijven die ik heb toegepast tijdens mijn stageperiode.
+    + *Ontwerpen:* Hier wroden de verschillende ontwerpmethoden en technieken beschreven die zijn toegepast tijdens de stageperiode.
 
-    + *Realiseren*: In dit hoofdstuk zal ik het ontwikkelingsproces van het product bespreken, inclusief de stappen die ik heb genomen om het te realiseren. Eventuele problemen die ik ben tegengekomen tijdens het ontwikkelingsproces zullen ook worden besproken.
+    + *Realiseren*: In dit hoofdstuk wordt het ontwikkelingsproces van het product besproken, inclusief de stappen die zijn heb genomen om het te realiseren. Eventuele problemen die tijdens het ontwikkelingsproces zijn voortgekomen worden ook besproken.
 
-    + *Onderzoeken:* Dit hoofdstuk richt zich op de verschillende onderzoeksmethoden en technieken beschrijven die ik heb toegepast tijdens mijn stageperiode. 
+    + *Projectmatig werken:* In dit hoofdstuk wordt het projectplan en de projectevaluatie besproken. Daarnaast wordt er een reflectie gegeven op het projectmatig werken.
 
-    + *Reflectie:* Hier zal ik reflecteren op mijn stage-ervaringen en de verschillende competenties die ik heb ontwikkeld tijdens mijn stageperiode.
+    + *Onderzoeken:* Dit hoofdstuk richt zich op de verschillende onderzoeksmethoden en technieken beschrijven die zijn heb toegepast tijdens de stageperiode. 
 
-    + *Conclusie:* In dit hoofdstuk zal ik een conclusie geven over mijn stage-ervaringen en de verschillende competenties.
+    + *Conclusie en aanbevelingen:* In dit hoofdstuk zal wordt een conclusie gegeven over de stage-ervaringen en de verschillende competenties.
 
-    + *Referenties en woordenlijst:* Hier zal ik de referenties en woordenlijst beschrijven die ik heb gebruikt tijdens mijn stageperiode.
+    + *Reflectie:* Hier zal een reflectie worden gegeven op de stage-ervaringen en de verschillende competenties die zijn ontwikkeld tijdens de stageperiode.
   ]
 )
-
-Ik neem je graag mee op mijn ontwikkelingsreis tijdens mijn stageperiode. Met trots presenteer ik de competenties, reflecties en ervaringen die mijn groei en toewijding aan het vakgebied van softwareontwikkeling weerspiegelen.
 
 // #pagebreak()
 // = Productomschrijving
@@ -122,6 +190,10 @@ Het nemen van besluiten op basis van feitelijke gegevens resulteert in beter res
 #lorem(50)
 #pagebreak()
 
+= Adivseren
+#lorem(50)
+#pagebreak()
+
 = Ontwerpen
 #lorem(50)
 #pagebreak()
@@ -129,8 +201,8 @@ Het nemen van besluiten op basis van feitelijke gegevens resulteert in beter res
 = Realiseren
 #lorem(50)
 #pagebreak()
-
-= Adviseren
+ 
+= Projectmatig werken
 #lorem(50)
 #pagebreak()
 
@@ -138,13 +210,9 @@ Het nemen van besluiten op basis van feitelijke gegevens resulteert in beter res
 #lorem(50)
 #pagebreak()
 
+= Conclusie en aanbevelingen
+#lorem(50)
+#pagebreak()
+
 = Reflectie
-#lorem(50)
-#pagebreak()
-
-= Conclusie
-#lorem(50)
-#pagebreak()
-
-= Referenties en wooordenlijst
 #lorem(50)
