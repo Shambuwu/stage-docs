@@ -4,7 +4,7 @@ Dit project is een uitgebreide verzameling van documenten die betrekking hebben 
 
 # Doelgroep
 
-Dit project is primair gericht op mijn onderwijsinstelling, begeleiders en toekomstige werkgevers in het vakgebied [jouw vakgebied]. Het dient als bewijs van mijn capaciteiten en toont de praktische toepassing van mijn vaardigheden en competenties die ik tijdens de stage heb verworven. De documenten bieden waardevolle inzichten in mijn probleemoplossende 
+Dit project is primair gericht op mijn onderwijsinstelling, begeleiders en toekomstige werkgevers in het vakgebied software engineering. Het dient als bewijs van mijn capaciteiten en toont de praktische toepassing van mijn vaardigheden en competenties die ik tijdens de stage heb verworven. De documenten bieden waardevolle inzichten in mijn probleemoplossende 
 aanpak, kritisch denken en mijn vermogen om in een professionele omgeving te werken.
 
 # Inhoud
