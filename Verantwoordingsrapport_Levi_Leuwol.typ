@@ -1,10 +1,22 @@
 #align(
   center,
-  text[
-    *Verkenning van Voedselrecepten en Ingrediënten* \
-    Een Verantwoordingsrapport over de Ontwikkeling van een Intuïtieve Datavisualisatietool \
-  ]
+  text(
+    size: 1.2em,
+    [
+      *Verkenning van Voedselrecepten en Ingrediënten* \
+      Een Verantwoordingsrapport over de Ontwikkeling van een Intuïtieve Datavisualisatietool \
+    ],
+  )
 )
+#align(
+  center,
+  figure(
+    image("bijlagen/OIG.png", 
+    width: 400pt
+    )
+  )
+)
+
 #let date = datetime(
   year: 2023,
   month: 6,
@@ -33,6 +45,14 @@
     font: "Linux Libertine",
 )
 
+= Voorwoord
+Voor u ligt het verantwoordingsrapport dat mijn persoonlijke groei en competentieontwikkeling weergeeft. Ik presenteer in dit rapport mijn ervaringen, verworven kennis en vaardigheden.
+
+Graag wil ik van deze gelegenheid gebruik maken om mijn waardering en dankbaarheid uit te spreken naar mijn medestudent Geert Perton. De voortdurende ondersteuning, samenwerking en motivatie gedurende dit traject waren van onschatbare waarde voor het behalen van de gestelde doelen. Samen hebben we kennis gedeeld en elkaar geïnspireerd om het beste uit onszelf te halen. Zonder zijn waardevolle bijdrage zou dit verantwoordingsrapport niet compleet zijn. 
+
+~ Levi Leuwol, #date.display()
+#pagebreak()
+
 #set heading(numbering: "1.1")
 #show heading: it => {
   set block(below: 10pt)
@@ -45,28 +65,18 @@
     *Inhoudsopgave*
   ],
 )
-#pagebreak()
 #set page(
   numbering: "1 / 1",
   number-align: right,
 )
-
-= Voorwoord
-Voor u ligt het verantwoordingsrapport dat vormt als weerspiegeling van mijn professionele ontwikkeling en competentiegroei gedurende mijn stageperiode. Graag presenteer ik in dit rapport mijn ervaringen, verworven kennis en vaardigheden.
-
-Graag wil ik van deze gelegenheid gebruik maken om mijn waardering en dankbaarheid uit te spreken naar mijn medestudent Geert Perton. De voortdurende ondersteuning, samenwerking en motivatie gedurende dit traject waren van onschatbare waarde voor het behalen van de gestelde doelen. Samen hebben we kennis gedeeld en elkaar geïnspireerd om het beste uit onszelf te halen. Zonder zijn waardevolle bijdrage zou dit verantwoordingsrapport niet compleet zijn. 
-
-~ Levi Leuwol, #date.display()
-
-#pagebreak()
 = Samenvatting
-Dit verslag presenteert de ontwikkeling en implementatie van een datavisualisatietool voor de voedingsindustrie. Het doel van het project was om een gebruiksvriendelijke webapplicatie te ontwerpen en ontwikkelen waarmee gebruikers recepten en ingrediënten kunnen zoeken, filteren, visualiseren en alternatieve ingrediënten kunnen identificeren.
+In dit verslag wordt de ontwikkeling en implementatie van een datavisualisatietool voor de voedingsindustrie weergegeven. Het doel van het project was om een gebruiksvriendelijke webapplicatie te ontwerpen en ontwikkelen waarmee gebruikers recepten en ingrediënten kunnen zoeken, filteren, visualiseren en alternatieve ingrediënten kunnen identificeren.
 
 Het ontwerpproces omvatte een grondige analyse van de vereisten, het opstellen van gedetailleerde functionele specificaties en het ontwikkelen van een passende architectuur.
 
-De tool biedt gebruikers een intuïtieve zoek- en filterfunctionaliteit op basis van verschillende criteria, zoals naam, type en voedingswaarde. Daarnaast kunnen gebruikers de gegevens visualiseren en de relaties tussen de knooppunten identificeren. Een vervangingsfunctie stelt gebruikers in staat om alternatieve ingrediënten te vergelijken op basis van voedingswaarde, smaak en overeenkomende recepten.
+De tool biedt gebruikers een intuïtieve zoek- en filterfunctionaliteit op basis van verschillende criteria, zoals naam, type en voedingswaarde. Daarnaast kunnen gebruikers de gegevens visualiseren en de relaties tussen de knooppunten identificeren. Een vervangingsfunctie stelt gebruikers in staat om alternatieve ingrediënten te vergelijken op basis van voedingswaarde, smaak en vergelijkbare recepten.
 
-Tijdens de uitvoering van het project zijn er enkele uitdagingen opgetreden, met name in de samenwerking en planning tussen projectleden, wat resulteerde in een gebrek aan overzicht en evaluatie. Om dit in de toekomst te verbeteren, worden aanbevelingen gedaan voor een gestructureerdere aanpak en duidelijke doelen en mijlpalen.
+Tijdens de uitvoering van het project zijn er enkele uitdagingen opgetreden, met name in de samenwerking en het nakomen van de planning, wat resulteerde in een gebrek aan overzicht en evaluatie. Om dit in de toekomst te verbeteren, worden aanbevelingen gedaan voor een gestructureerdere aanpak met duidelijke doelen en mijlpalen.
 
 Het uiteindelijke resultaat van het project is een functionele datavisualisatietool die waardevolle inzichten biedt aan de voedingsindustrie. De tool kan bijdragen aan het verduurzamen van recepten, het identificeren van alternatieven en het versnellen van productinnovatie.
 
@@ -76,17 +86,17 @@ Het succesvolle ontwikkelingsproces van deze datavisualisatietool benadrukt het 
 #pagebreak()
 = Inleiding
 == Context en achtergrond
-Tijdens de stageperiode is er gewerkt aan een datavisualisatietool. Deze opdracht is gemaakt in dienst van Wynand Alkema, namens zijn bedrijf Tenwise; een bedrijf gespecialiseerd in data-analyse. Op basis van publieke databronnen heeft Tenwise een voedselrecept netwerk gebouwd. Op basis van AI kan er met de relaties voorspelt worden welke recepten vervangen zouden kunnen worden door gezondere en goedkopere alternatieven. Tenwise heeft niet alleen behoefte bij het analyseren van dit netwerk met AI, maar ook bij het interactief verkennen van de data via een webinterface.
+Tijdens de stageperiode is er gewerkt aan een datavisualisatietool. Het project is in opdracht van Wynand Alkema van Tenwise gedaan. Tenwise is gespecialiseerd in data-analyse. Op basis van publieke databronnen heeft Tenwise een netwerk van voedselrecepten gebouwd. Op basis van AI kan er met de relaties voorspeld worden welke recepten vervangen kunnen worden door gezondere en goedkopere alternatieven. Tenwise heeft niet alleen behoefte bij het analyseren van dit netwerk met AI, maar ook bij het interactief verkennen van de data via een webinterface.
 
 == Aanleiding
-Bedrijven in de voedingsindustrie staan voor de uitdaging om recepten, processen en producten voortdurend aan te passen om tegemoet te komen aan de veranderende markt en nieuwe wetgeving. Inzicht in de eigenschappen van voedingsingrediënten is essentieel om deze aanpassingen succesvol te kunnen maken. Het ontwikkelen van recepten met uitsluitend plantaardige ingrediënten, terwijl traditioneel dierlijke ingrediënten worden gebruikt, vormt een specifieke uitdaging. 
+Bedrijven in de voedingsindustrie staan voor de uitdaging om recepten, processen en producten voortdurend aan te passen aan de veranderende markt en nieuwe wetgeving. Inzicht in de eigenschappen van voedingsingrediënten is essentieel om deze aanpassingen succesvol te kunnen maken. Het ontwikkelen van recepten met uitsluitend plantaardige ingrediënten, terwijl traditioneel dierlijke ingrediënten worden gebruikt, vormt een specifieke uitdaging. 
 
 Om dit probleem aan te pakken, hebben voedingsontwikkelaars Exter en Euroma samengewerkt met het Kenniscentrum Biobased Economy van de Hanzehogeschool Groningen, onder leiding van lector Wynand Alkema en docent-onderzoeker Fenna Feenstra. Met de steun van een KIEM-subsidie hebben zij zich gericht op data science voor de voedingsindustrie. Door gebruik te maken van tekst-mining en algoritmen hebben ze meer dan één miljoen recepten, bijna net zoveel ingrediënten, 1668 moleculen en 35 miljoen wetenschappelijke papers geïndexeerd. Hierdoor ontstond een netwerkstructuur waarin de relaties tussen ingrediënten, moleculen, recepten en beschrijvingen zichtbaar werden. Dit biedt voedingsontwikkelaars snel inzicht in de samenstelling, bereidingswijze, smaak en textuur van recepten, waardoor ze kunnen zoeken naar goedkopere en duurzame alternatieven.
 
 == Opdracht en doelstellingen
 De opdracht die is toevertrouwd door de opdrachtgever is het ontwikkelen van een intuïtieve webapplicatie die gebruikers helpt bij het verkennen van voedselrecepten en ingrediënten. De focus ligt hierbij op het oplossen van de volgende problemen: beperkte kennis over queries, gebrek aan overzichtelijke informatie en het ontbreken van contextuele informatie.
 
-De doelstellingen van de opdracht zijn tweedelig. Ten eerste wordt er gestreven naar een gebruiksvriendelijke en intuïtieve zoekfunctionaliteit. Dit omvat het implementeren van zoektechnieken en -functies, zodat gebruikers zonder verstand van de Cypher query-taal toch zoekopdrachten kunnen uitvoeren. Daarnaast horen gebruikers voorzien te worden van overzichtelijke informatie over recepten en ingrediënten, zodat ze snel en gemakkelijk relevante informatie kunnen vinden. Ook is de prestatie van de webapplicatie een belangrijk aandachtspunt. De webapplicatie moet snel en responsief zijn, zodat gebruikers snel en efficiënt kunnen werken.
+De doelstel van de opdracht is tweedelig. Ten eerste wordt er gestreven naar een gebruiksvriendelijke en intuïtieve zoekfunctionaliteit. Dit omvat het implementeren van zoektechnieken en -functies, zodat gebruikers zonder verstand van de Cypher query-taal zoekopdrachten kunnen uitvoeren. Daarnaast dienen gebruikers voorzien te worden van overzichtelijke informatie over recepten en ingrediënten, zodat ze snel en gemakkelijk relevante informatie kunnen vinden. Ook is de prestatie van de webapplicatie een belangrijk aandachtspunt. De webapplicatie moet snel en responsief zijn, zodat gebruikers snel en efficiënt kunnen zoeken.
 
 Ten tweede moet er contextuele informatie geleverd worden, die gebruikers helpt om de data beter te begrijpen. Dit omvat het presenteren van aanvullende informatie over de ingrediënten, zoals vervangingsmogelijkheden, voedingswaarde en smaak. Met deze contextuele informatie kunnen gebruikers betere beslissing nemen, de juiste conclusies trekken en hun recepten aanpassen op basis van hun behoeften en voorkeuren.
 
@@ -255,6 +265,7 @@ Voor de competentie Onderzoek is er een grondige en systematische aanpak toegepa
 
 De toegepaste onderzoeksmethoden hebben bijgedragen aan een beter begrip van de prestatie-aspecten van de applicatie en hebben geleid tot de succesvolle optimalisatie van de applicatie.
 
+#pagebreak()
 = Conclusie en aanbevelingen
 == Conclusie
 Tijdens de stageperiode is er gewerkt aan een datavisualisatietool, waarmee gebruikers recepten en ingrediënten kunnen zoeken, filteren en visualiseren. De implementatie van zoekfunctionaliteit, filterfunctionaliteit en visualisatiefunctionaliteit heeft bijgedragen aan een intuïtieve en gebruiksvriendelijke webapplicatie. De webapplicatie biedt gebruikers de mogelijkheid om de data te verkennen en de informatie te vinden die ze nodig hebben.
@@ -305,7 +316,8 @@ Al met al kijk ik terug op een waardevolle ervaring. De uitvoering van deze opdr
     [Onderzoeken: Onderzoeksrapport en resultaten], [L. J. J. Leuwol], [documenten -> onderzoeksrapport.pdf],
     [], [], [],
     [*Bijlagen*], [], [],
-    [Hanzehogeschool Groningen logo], [Hanzehogeschool Groningen], [https://freebiesupply.com/logos/hanzehogeschool-groningen-logo/]
+    [Hanzehogeschool Groningen logo], [Hanzehogeschool Groningen], [https://freebiesupply.com/logos/hanzehogeschool-groningen-logo/],
+    [Titelpagina figuur], [DALL-E-2, OpenAI], [bijlagen -> OIG.png],
   )
 )
 
