@@ -11,7 +11,7 @@
 #align(
   center,
   figure(
-    image("../bijlagen/OIG.png", 
+    image("../bijlagen/analyserapport/OIG.jpg", 
     width: 400pt
     )
   )
@@ -241,7 +241,7 @@ De volgende use cases beschrijven de functionaliteiten van het systeem. De use c
   image("../bijlagen/analyserapport/use_case_2.png", 
   width: 325pt
   ),
-  caption: [Zoeken naar recepten],
+  caption: [Vinden van alternatieve ingrediënten],
   kind: "diagram",
   supplement: [*Use case*]
 )
@@ -260,7 +260,7 @@ De volgende use cases beschrijven de functionaliteiten van het systeem. De use c
   image("../bijlagen/analyserapport/use_case_3.png", 
   width: 325pt
   ),
-  caption: [Zoeken naar recepten],
+  caption: [Filteren van recepten],
   kind: "diagram",
   supplement: [*Use case*]
 )
@@ -290,7 +290,7 @@ De huidige systeemvereisten voor het verkennen van de data, waarbij gebruikers h
     stroke: none,
     [*Bijlagen*], [], [],
     [Hanzehogeschool Groningen logo], [Hanzehogeschool Groningen], [https://freebiesupply.com/logos/hanzehogeschool-groningen-logo/],
-    [Titelpagina figuur], [DALL-E-2, OpenAI], [bijlagen -> OIG.png],
+    [Titelpagina figuur], [DALL-E-2, OpenAI], [bijlagen -> analyserapport -> OIG.jpg],
     [Sequentiediagram 1], [L. J. J. Leuwol], [bijlagen -> analyserapport -> use_case_1.png],
     [Sequentiediagram 2], [L. J. J. Leuwol], [bijlagen -> analyserapport -> use_case_2.png],
     [Sequentiediagram 3], [L. J. J. Leuwol], [bijlagen -> analyserapport -> use_case_3.png],

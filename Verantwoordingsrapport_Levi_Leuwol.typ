@@ -308,7 +308,7 @@ Al met al kijk ik terug op een waardevolle ervaring. De uitvoering van deze opdr
     [Server], [G. E. Perton, L. J. J. Leuwol], [broncode -> backend],
     [], [], [],
     [*Documenten*], [], [],
-    [Analyseren: Documentanalyse en inzichten], [L. J. J. Leuwol], [documenten -> analyserapport.pdf],
+    [Analyseren: Analyse en inzichten], [L. J. J. Leuwol], [documenten -> analyserapport.pdf],
     [Adviseren: Adviesrapport en aanbevelingen], [L. J. J. Leuwol], [documenten -> adviesrapport.pdf],
     [Ontwerpen: Ontwerpdocument en onderbouwing], [L. J. J. Leuwol], [documenten -> ontwerprapport.pdf],
     [Realiseren: Implementatierapport en uitvoering], [L. J. J. Leuwol], [documenten -> implementatierapport.pdf],
