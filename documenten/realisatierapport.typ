@@ -94,7 +94,7 @@ De volgende randvoorwaarden zijn gesteld voor de implementatie:
 
     + *Samenvatting:* Dit deel biedt een beknopt overzicht van de belangrijkste punten van het rapport.
 
-    + *Inleiding:* Hier wordt de context en het doel van het rapport uiteengezet, inclusief achtergrondonderzoek en randvoorwaarden.
+    + *Inleiding:* Hier wordt de context en het doel van het rapport uiteengezet.
 
     + *Implementatiestappen:* Dit hoofdstuk is opgedeeld in verschillende subsecties zoals voorbereiding, realisatie en de verschillende componenten van de applicatie zoals opstelling, configuratie, controllers, services en entiteiten.
 
